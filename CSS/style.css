@@ -43,9 +43,11 @@ h1 {
     transition: 0.8s;
 }
 
-i + p {
+i +  a {
     visibility:hidden;
     opacity:0;
+    text-decoration: none;
+    color:white;
     font-weight: 300;
     font-size: 1.3rem;
     margin: -0.5rem 0;
@@ -83,7 +85,7 @@ i + p {
     border-radius:15px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
 
-.card_clicked i + p {
+.card_clicked i + a {
     visibility: visible;
     opacity:1;
 }
