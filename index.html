@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+    <div id="container_social">
+        <h1>Follow us</h1>
+    
+        <div id="social_cards">
+            <div class="social_card">
+                <i class="fa-brands fa-facebook"></i>
+                <p>Facebook</p>
+            </div>
+            <div class="social_card">
+                <i class="fa-brands fa-twitter"></i>
+                <p>Twitter</p>
+            </div>
+            <div class="social_card">
+                <i class="fa-brands fa-instagram"></i>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('click', function handleClick(event) {
+            var socialCard = event.target.closest('.social_card');
+
+            if (socialCard) {
+                if (socialCard.querySelector('.fa-facebook')) {
+                    if (socialCard) {
+                        if (socialCard.classList.contains('card_clicked')) {
+                            socialCard.classList.remove('card_clicked')
+                            document.body.style.background = 'rgb(195,195,195)'
+                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
+                        } else { 
+                            socialCard.classList.add('card_clicked');
+                            document.body.style.background = '#6678aa';
+                        }
+                    }
+
+                } else if (socialCard.querySelector('.fa-twitter')) {
+                    if (socialCard) {
+                        if (socialCard.classList.contains('card_clicked')) {
+                            socialCard.classList.remove('card_clicked')
+                            document.body.style.background = 'rgb(195,195,195)'
+                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
+                        } else { 
+                            socialCard.classList.add('card_clicked');
+                            document.body.style.background = '#5bbbed';
+                        }
+                    }
+
+                } else if (socialCard.querySelector('.fa-instagram')) {
+                    if (socialCard) {
+                        if (socialCard.classList.contains('card_clicked')) {
+                            socialCard.classList.remove('card_clicked')
+                            document.body.style.background = 'rgb(195,195,195)'
+                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
+                        } else { 
+                            socialCard.classList.add('card_clicked');
+                            document.body.style.background = '#d95787';
+                        }
+                    }
+                }
+            }
+            });
+
+    </script>
+
+</body>
+</html>
