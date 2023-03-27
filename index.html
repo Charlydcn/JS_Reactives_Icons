@@ -16,14 +16,19 @@
         <div id="social_cards">
             <div class="social_card">
                 <i class="fa-brands fa-facebook"></i>
-                <p>Facebook</p>
+                <a href="https://www.facebook.com">
+                    <p>Facebook</p>
+                </a>
             </div>
             <div class="social_card">
-                <i class="fa-brands fa-twitter"></i>
-                <p>Twitter</p>
+                <a href="https://www.twitter.com">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
             </div>
             <div class="social_card">
-                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
                 <p>Instagram</p>
             </div>
         </div>
@@ -33,46 +38,20 @@
 
         document.addEventListener('click', function handleClick(event) {
             var socialCard = event.target.closest('.social_card');
+            var cardBackground = window.getComputedStyle(socialCard).background
 
             if (socialCard) {
-                if (socialCard.querySelector('.fa-facebook')) {
-                    if (socialCard) {
-                        if (socialCard.classList.contains('card_clicked')) {
-                            socialCard.classList.remove('card_clicked')
-                            document.body.style.background = 'rgb(195,195,195)'
-                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
-                        } else { 
-                            socialCard.classList.add('card_clicked');
-                            document.body.style.background = '#6678aa';
-                        }
-                    }
-
-                } else if (socialCard.querySelector('.fa-twitter')) {
-                    if (socialCard) {
-                        if (socialCard.classList.contains('card_clicked')) {
-                            socialCard.classList.remove('card_clicked')
-                            document.body.style.background = 'rgb(195,195,195)'
-                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
-                        } else { 
-                            socialCard.classList.add('card_clicked');
-                            document.body.style.background = '#5bbbed';
-                        }
-                    }
-
-                } else if (socialCard.querySelector('.fa-instagram')) {
-                    if (socialCard) {
-                        if (socialCard.classList.contains('card_clicked')) {
-                            socialCard.classList.remove('card_clicked')
-                            document.body.style.background = 'rgb(195,195,195)'
-                            document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
-                        } else { 
-                            socialCard.classList.add('card_clicked');
-                            document.body.style.background = '#d95787';
-                        }
-                    }
-                }
+                if (socialCard.classList.contains('card_clicked')) {
+                    socialCard.classList.remove('card_clicked')
+                    document.body.style.background = 'rgb(195,195,195)'
+                    document.body.style.background = 'radial-gradient(circle, rgba(195,195,195,1) 0%, rgba(227,227,227,1) 100%)'
+                } else {
+                    socialCard.classList.add('card_clicked')
+                    document.body.style.background = cardBackground
+                    document.body.style.backdropFilter = ('saturate(0.7)')
+                } 
             }
-            });
+        })
 
     </script>
 
